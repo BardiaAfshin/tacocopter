@@ -2,5 +2,25 @@
 <p>Find me in app/views/tacofinder/index.html.erb</p>
 
 
-<% form_tag('/tacofinder/search', :method => 'get') %>
+<%=form_tag('/tacofinder/search', :method => 'get') do -%>
 
+	<div>Tacos</div>
+    <%=collection_check_boxes(:taco, :taco_name, Taco.all, :name, :name) do |ct| %>
+    	<div class='taco-check-boxes'>
+    	 <%= ct.check_box %>
+    	 <%= ct.label %>
+    	</div>
+    <% end %>
+
+    <div>Salsas</div>
+    <%=collection_check_boxes(:salsa, :salsa_name, Salsa.all, :name, :name) do |st| %>
+
+    	<div class='salsa-check-boxes'>
+    	<%= st.check_box %>
+    	<%= st.label %>
+    	</div>
+    <% end %>
+
+	<div><%=submit_tag('Search') %></div>
+
+<% end %>
