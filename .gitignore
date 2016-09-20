@@ -18,3 +18,14 @@
 config/database.yml
 ._*
 .DS_Store
+
+
+.idea/.generators
+.idea/.rakeTasks
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations/
+.idea/tacocopter.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/encodings.xml
